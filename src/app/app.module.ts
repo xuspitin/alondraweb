@@ -15,6 +15,8 @@ import { CatsComponent } from './components/cats/cats.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { DonationComponent } from './components/donation/donation.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     CatsComponent,
     ContactComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    DonationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
