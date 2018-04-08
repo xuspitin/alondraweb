@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Http, HttpModule } from '@angular/http';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -34,7 +36,12 @@ import { FooterComponent } from './components/shared/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: function(http: Http){ return new TranslateStaticLoader(http, '/assets/i18n', '.json') },
+      deps: [Http]
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
